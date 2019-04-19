@@ -1,0 +1,8 @@
+creare un server che crei automaticamente le tabelle necessarie per gestire un supermercato:
+
+- prodotto
+- impiegati
+- clienti
+- fornitori
+
+far sì che ad una certa url, il server faccia vedere una pagina con una lista di prodotti.
