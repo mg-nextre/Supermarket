@@ -53,6 +53,40 @@
         </div>
     </div>
 
+    <form action="#" th:action="@{/fornitori}" th:object="${fornitore}" method="post">
+        <div class="form-group">
+            <label for="nome">Nome</label>
+            <input th:field="*{nome}" type="text" class="form-control" id="nome" aria-describedby="emailHelp" placeholder="Enter name">
+        </div>
+        <div class="form-group">
+            <label for="cognome">Cognome</label>
+            <input th:field="*{cognome}" type="text" class="form-control" id="cognome" placeholder="Cognome">
+        </div>
+        <div class="form-group">
+            <label for="eta">Età</label>
+            <input th:field="*{eta}" type="number" class="form-control" id="eta" placeholder="Età">
+        </div>
+
+        <div class="form-group">
+            <label for="sesso">Sesso</label>
+            <select th:field="*{sesso}" class="form-control" id="sesso">
+                <option value="UOMO">UOMO</option>
+                <option value="DONNA">DONNA</option>
+                <option value="ALTRO">ALTRO</option>
+            </select>
+        </div>
+
+        <div class="form-group">
+            <label for="partitaIva">Partita Iva</label>
+            <input th:field="*{partitaIva}" type="text" class="form-control" id="partitaIva" placeholder="partitaIva">
+        </div>
+        <div class="form-group">
+            <label for="fatturato">Fatturato</label>
+            <input th:field="*{fatturato}" type="text" class="form-control" id="fatturato" placeholder="fatturato">
+        </div>
+        <button type="submit" class="btn btn-primary">Create</button>
+    </form>
+
     <div class="row">
         <div class="col-sm-6 my-3" th:each="fornitore : ${listFornitori}">
             <div class="card">
@@ -62,7 +96,10 @@
                     <p class="card-text"><span th:text="${fornitore.sesso}"></span></p>
                     <p class="card-text"><span th:text="${fornitore.fatturato}"></span></p>
                     <p class="card-text"><span th:text="${fornitore.partitaIva}"></span></p>
-
+                    <form th:object="${fornitore}" th:action="@{/fornitori}" th:method="delete">
+                        <input type="hidden" name="id" th:value="${fornitore.id}"/>
+                        <input value="Delete" type="submit" class="btn btn-danger"/>
+                    </form>
                 </div>
             </div>
         </div>

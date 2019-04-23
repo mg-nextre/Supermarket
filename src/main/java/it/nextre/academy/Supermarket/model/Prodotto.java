@@ -25,6 +25,7 @@ public class Prodotto {
     private String nome;
     private BigDecimal prezzo;
     @NotNull
+    @Column(length = 250)
     private String codiceProdotto;
 
     public Prodotto(String nome,BigDecimal prezzo, String codiceProdotto){

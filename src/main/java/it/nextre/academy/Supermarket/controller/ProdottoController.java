@@ -20,12 +20,6 @@ public class ProdottoController {
         this.prodottoService = prodottoService;
     }
 
-    /*@GetMapping("products")
-    public List<Prodotto> getAllProducts(){
-
-        return prodottoService.getAll();
-    }*/
-
     @GetMapping("/pippo/{nomeProdotto}")
     public String getByNomeProdotto(@PathVariable @NotNull String nomeProdotto, Model model){
         model.addAttribute("listProducts",prodottoService.findByNome(nomeProdotto));

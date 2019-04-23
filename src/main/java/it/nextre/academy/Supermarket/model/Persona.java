@@ -5,6 +5,7 @@ import lombok.*;
 import javax.persistence.*;
 
 @AllArgsConstructor
+@NoArgsConstructor
 @Setter
 @Getter
 @ToString
@@ -12,7 +13,7 @@ import javax.persistence.*;
 @MappedSuperclass
 public abstract class Persona {
 
-    public enum Sesso{
+    public static enum Sesso{
         UOMO,DONNA,ALTRO
     }
 

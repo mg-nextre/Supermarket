@@ -1,6 +1,7 @@
 package it.nextre.academy.Supermarket.model;
 
 import lombok.Getter;
+import lombok.NoArgsConstructor;
 import lombok.Setter;
 import lombok.ToString;
 
@@ -11,6 +12,7 @@ import java.util.Objects;
 
 @Getter
 @Setter
+@NoArgsConstructor
 @ToString
 @Entity
 @Table(name = "CLIENTI", uniqueConstraints = @UniqueConstraint(name = "UNIQUE_CODICE_CARTA_PUNTI",columnNames={"codiceCartaPunti"}))
@@ -20,6 +22,7 @@ public class Clienti extends Persona{
     @GeneratedValue(strategy= GenerationType.AUTO)
     private Long id;
     @NotNull
+    @Column(length = 250)
     private String codiceCartaPunti;
     private BigDecimal budgetDiSpesa;
 

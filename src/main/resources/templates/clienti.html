@@ -53,6 +53,40 @@
         </div>
     </div>
 
+    <form action="#" th:action="@{/clienti}" th:object="${cliente}" method="post">
+        <div class="form-group">
+            <label for="nome">Nome</label>
+            <input th:field="*{nome}" type="text" class="form-control" id="nome" aria-describedby="emailHelp" placeholder="Enter name">
+        </div>
+        <div class="form-group">
+            <label for="cognome">Cognome</label>
+            <input th:field="*{cognome}" type="text" class="form-control" id="cognome" placeholder="Cognome">
+        </div>
+        <div class="form-group">
+            <label for="eta">Età</label>
+            <input th:field="*{eta}" type="number" class="form-control" id="eta" placeholder="Età">
+        </div>
+
+        <div class="form-group">
+            <label for="sesso">Sesso</label>
+            <select th:field="*{sesso}" class="form-control" id="sesso">
+                <option value="UOMO">UOMO</option>
+                <option value="DONNA">DONNA</option>
+                <option value="ALTRO">ALTRO</option>
+            </select>
+        </div>
+
+        <div class="form-group">
+            <label for="codiceCartaPunti">codiceCartaPunti</label>
+            <input th:field="*{codiceCartaPunti}" type="text" class="form-control" id="codiceCartaPunti" placeholder="codiceCartaPunti">
+        </div>
+        <div class="form-group">
+            <label for="budgetDiSpesa">budgetDiSpesa</label>
+            <input th:field="*{budgetDiSpesa}" type="number" class="form-control" id="budgetDiSpesa" placeholder="budgetDiSpesa">
+        </div>
+        <button type="submit" class="btn btn-primary">Create</button>
+    </form>
+
     <div class="row">
         <div class="col-sm-6 my-3" th:each="cliente : ${listClienti}">
             <div class="card">
@@ -62,6 +96,10 @@
                     <p class="card-text"><span th:text="${cliente.sesso}"></span></p>
                     <p class="card-text"><span th:text="${cliente.codiceCartaPunti}"></span></p>
                     <p class="card-text"><span th:text="${cliente.budgetDiSpesa}"></span></p>
+                    <form th:object="${cliente}" th:action="@{/clienti}" th:method="delete">
+                        <input type="hidden" name="id" th:value="${cliente.id}"/>
+                        <input value="Delete" type="submit" class="btn btn-danger"/>
+                    </form>
                 </div>
             </div>
         </div>

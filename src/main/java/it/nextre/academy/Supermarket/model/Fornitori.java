@@ -1,6 +1,7 @@
 package it.nextre.academy.Supermarket.model;
 
 import lombok.Getter;
+import lombok.NoArgsConstructor;
 import lombok.Setter;
 import lombok.ToString;
 
@@ -11,6 +12,7 @@ import java.util.Objects;
 
 @Setter
 @Getter
+@NoArgsConstructor
 @ToString
 @Entity
 @Table(name = "FORNITORI", uniqueConstraints = @UniqueConstraint(name = "UNIQUE_PARTITA_IVA",columnNames={"partitaIva"}))
@@ -20,6 +22,7 @@ public class Fornitori extends Persona{
     @GeneratedValue(strategy= GenerationType.AUTO)
     private Long id;
     @NotNull
+    @Column(length = 250)
     private String partitaIva;
     private BigDecimal fatturato;
 

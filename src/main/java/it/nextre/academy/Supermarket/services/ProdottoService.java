@@ -10,7 +10,6 @@ public interface ProdottoService {
     Prodotto get(String codiceProdotto);
     void add(Prodotto prodotto);
     List<Prodotto> findByNome(String nome);
-    //void delete(Prodotto prodotto);
 
     void deleteById(Long id);
 }//end interface

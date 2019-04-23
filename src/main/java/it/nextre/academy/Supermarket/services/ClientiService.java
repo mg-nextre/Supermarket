@@ -9,4 +9,10 @@ public interface ClientiService {
     List<Clienti> getAll();
     Clienti get(String codiceCartaPunti);
 
+    <S extends Clienti> S save(S entity);
+    <S extends Clienti> Iterable<S> saveAll(Iterable<S> entities);
+    Iterable<Clienti> findAll();
+    void deleteById(Long aLong);
+    void deleteAll();
+
 }//end interface

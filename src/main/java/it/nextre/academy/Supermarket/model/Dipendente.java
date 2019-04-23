@@ -8,6 +8,7 @@ import java.util.Objects;
 
 @Getter
 @Setter
+@NoArgsConstructor
 @ToString
 @Entity
 @Table(name = "DIPENDENTE", uniqueConstraints = @UniqueConstraint(name = "UNIQUE_IBAN",columnNames={"iban"}))
@@ -22,6 +23,7 @@ public class Dipendente extends Persona{
     private Long id;
     private Ruolo ruolo;
     @NotNull
+    @Column(length = 250)
     private String iban;
 
     public Dipendente(String nome, String cognome, Integer eta, Sesso sesso, Ruolo ruolo, String iban) {
