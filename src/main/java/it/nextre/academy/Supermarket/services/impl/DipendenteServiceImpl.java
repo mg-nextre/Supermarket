@@ -18,7 +18,8 @@ public class DipendenteServiceImpl implements DipendenteService {
     @Autowired
     public DipendenteServiceImpl(DipendenteRepository dipendenteRepository){
         this.dipendenteRepository = dipendenteRepository;
-        Dipendente d1 = new Dipendente("paolo","culo",2, Persona.Sesso.ALTRO, Dipendente.Ruolo.IMPIEGATO,"paoloculoculoculoculoculo");
+
+        /*Dipendente d1 = new Dipendente("paolo","culo",2, Persona.Sesso.ALTRO, Dipendente.Ruolo.IMPIEGATO,"paoloculoculoculoculoculo");
         Dipendente d2 = new Dipendente("super","paolo",0, Persona.Sesso.ALTRO, Dipendente.Ruolo.IMPIEGATO,"superculo");
         Dipendente d3 = new Dipendente("megaipersuper","paolo",-10000, Persona.Sesso.ALTRO, Dipendente.Ruolo.IMPIEGATO,"megaipersuperculo");
         List<Dipendente> dipendenteList = new ArrayList<>();
@@ -26,7 +27,7 @@ public class DipendenteServiceImpl implements DipendenteService {
         dipendenteList.add(d2);
         dipendenteList.add(d3);
 
-        dipendenteRepository.saveAll(dipendenteList);
+        dipendenteRepository.saveAll(dipendenteList);*/
     }
 
     @Override

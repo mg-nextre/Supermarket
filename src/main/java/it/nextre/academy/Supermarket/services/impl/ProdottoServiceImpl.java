@@ -20,7 +20,7 @@ public class ProdottoServiceImpl implements ProdottoService {
     public ProdottoServiceImpl(ProdottoRepository prodottoRepository){
         this.prodottoRepository = prodottoRepository;
 
-        List<Prodotto> prodotti = new ArrayList<>();
+        /*List<Prodotto> prodotti = new ArrayList<>();
 
         Prodotto a = new Prodotto("sardine",new BigDecimal(12.03).round(MathContext.DECIMAL32).stripTrailingZeros(),"sard12345");
         Prodotto b = new Prodotto("sassi",new BigDecimal(0.75).round(MathContext.DECIMAL32).stripTrailingZeros(),"sasso987");
@@ -36,7 +36,7 @@ public class ProdottoServiceImpl implements ProdottoService {
         prodotti.add(e);
         prodotti.add(f);
         prodotti.add(g);
-        prodottoRepository.saveAll(prodotti);
+        prodottoRepository.saveAll(prodotti);*/
     }
 
     @Override

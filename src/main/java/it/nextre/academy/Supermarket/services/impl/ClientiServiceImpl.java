@@ -21,14 +21,14 @@ public class ClientiServiceImpl implements ClientiService {
     public ClientiServiceImpl(ClientiRepository clientiRepository){
         this.clientiRepository = clientiRepository;
 
-        Clienti a = new Clienti("ciccio","papero",23, Persona.Sesso.UOMO,"cicciopapero23",new BigDecimal(2300).round(MathContext.DECIMAL32).stripTrailingZeros());
+        /*Clienti a = new Clienti("ciccio","papero",23, Persona.Sesso.UOMO,"cicciopapero23",new BigDecimal(2300).round(MathContext.DECIMAL32).stripTrailingZeros());
         Clienti b = new Clienti("nonna","papera",400, Persona.Sesso.DONNA,"nonnapapera400",new BigDecimal(5000).round(MathContext.DECIMAL32).stripTrailingZeros());
         Clienti c = new Clienti("paperon","de' paperoni",9999, Persona.Sesso.UOMO,"numerouno",new BigDecimal(99999999999L).round(MathContext.DECIMAL32).stripTrailingZeros());
         List<Clienti> clientiList = new ArrayList<>();
         clientiList.add(a);
         clientiList.add(b);
         clientiList.add(c);
-        clientiRepository.saveAll(clientiList);
+        clientiRepository.saveAll(clientiList);*/
     }
 
     @Override

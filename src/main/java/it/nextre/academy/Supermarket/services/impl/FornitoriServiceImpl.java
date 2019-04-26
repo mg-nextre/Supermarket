@@ -21,7 +21,7 @@ public class FornitoriServiceImpl implements FornitoriService {
     public FornitoriServiceImpl(FornitoriRepository fornitoriRepository){
         this.fornitoriRepository = fornitoriRepository;
 
-        Fornitori a = new Fornitori("Asdrubale","Pisquano",44, Persona.Sesso.UOMO,"asdrubalepisquano44",new BigDecimal(33000).round(MathContext.DECIMAL32).stripTrailingZeros());
+        /*Fornitori a = new Fornitori("Asdrubale","Pisquano",44, Persona.Sesso.UOMO,"asdrubalepisquano44",new BigDecimal(33000).round(MathContext.DECIMAL32).stripTrailingZeros());
         Fornitori b = new Fornitori("Gargantua","Turiddu",23, Persona.Sesso.UOMO,"gargantuaturiddu23",new BigDecimal(99800).round(MathContext.DECIMAL32).stripTrailingZeros());
         Fornitori c = new Fornitori("Paolo","Culo",53550, Persona.Sesso.ALTRO,"culoculopaoloculoculo",new BigDecimal(-10000000).round(MathContext.DECIMAL32).stripTrailingZeros());
         List<Fornitori> fornitoriList = new ArrayList<>();
@@ -29,7 +29,7 @@ public class FornitoriServiceImpl implements FornitoriService {
         fornitoriList.add(b);
         fornitoriList.add(c);
 
-        fornitoriRepository.saveAll(fornitoriList);
+        fornitoriRepository.saveAll(fornitoriList);*/
     }
 
     @Override

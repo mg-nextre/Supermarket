@@ -41,7 +41,7 @@ public class DipendenteController {
     }
 
     @DeleteMapping()
-    public String deleteByCartaPunti(@RequestParam Long id, Model model){
+    public String deleteById(@RequestParam Long id, Model model){
         dipendenteService.deleteById(id);
         return get(model);
     }
